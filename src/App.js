@@ -14,7 +14,6 @@ function App(){
 
   const [frase, obtenerFrase] = useState({});
 
-
   // Consulta a una REST API
   const consultarAPI = async () => {
     const resultado = await axios('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
@@ -33,6 +32,9 @@ function App(){
       <Frase 
         frase={frase}
       />
+      <button
+        onClick={consultarAPI}
+      >Generar nueva frase</button>
     </div>
   );
 }
